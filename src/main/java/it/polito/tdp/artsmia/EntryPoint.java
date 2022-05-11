@@ -2,7 +2,6 @@ package it.polito.tdp.artsmia;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
-
 import it.polito.tdp.artsmia.model.Model;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,6 +16,7 @@ public class EntryPoint extends Application {
     	FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Scene.fxml"));
     	Parent root = loader.load();
         Scene scene = new Scene(root);
+        scene.getRoot().setStyle("-fx-font-family: 'serif'");
          
         Model model = new Model();
         FXMLController controller = loader.getController();
